@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        button {
+           margin-top: 20px;
+        }
+        button a{
+        text-decoration-line:none;
+        color: white; 
+    }
+    #form-container{
+        margin: 8% 0 0 35%;
+        padding: 10px 10px 0 10px;
+        border-radius: 5px;
+        width: 30%;
+        height: 68%; 
+        text-align: center;
+        background-color: white;
+    }
+    body{
+        background-color: #BC9E82;
+    }
+    .TA{
+        text-decoration: none;
+        color: white;
+        margin: -20px 20px -100px 0;
+    } 
+    .TA:hover{
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div id="form-container">
+        <form action="#" method="">
+            <legend>Login</legend>
+            <fieldset>
+                <div class="mb-3">
+                    <label class="form-label">User Name</label>
+                    <input type="text" name="userName" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" required />
+                </div>
+                <input type="submit" value="Login" class="btn btn-primary" />
+                <br/>
+                <button class="btn btn-primary"><a href="portal/student/student-signup.html">Sign up as Student</a></button>
+                <br/>
+                <button class="btn btn-primary"><a href="#">Apply as a Teacher/Tutor</a></button>
+            </fieldset>
+        </form>
+      </div> 
+      <a href="#" class="TA">Teacher</a>
+      <a href="#" class="TA">Admin</a>
+    </div>
+</body>
+</html>
