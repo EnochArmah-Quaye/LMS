@@ -4,7 +4,7 @@
 $servername="localhost";
 $user="root";
 $dbpassword="10835954enoch";
-$dbname="LMS";
+$dbname="lms";
 
 $conn = mysqli_connect($servername,$user,$dbpassword,$dbname);
 

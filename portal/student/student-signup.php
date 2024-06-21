@@ -11,16 +11,17 @@ if(isset($_POST['submit'])){
     $username= $_POST['username']; 
     $password= $_POST['password1'];
 
-    $sql= "INSERT INTO student (id, firstName, lastName, dob, email, contact, userName, password1) 
-    VALUES('0','$firstName', '$lastName', '$dob', '$email', '$username', '$password')";
+    $sql= "INSERT INTO student (id,firstName,lastName,dob,email,contact,userName,password1) 
+    VALUES('0','$firstName','$lastName','$dob','$email','$contact','$username','$password')";
 
     $rsl= mysqli_query($conn,$sql);
 
-    if(!$rsl){
+    if($rsl){
         echo"<p> Student Profile Created Successfully</p>";
     }
     else{
         echo"<p>Student Profile Was Not Created</p>";
     }
 }
+mysqli_close($conn);
  ?>
