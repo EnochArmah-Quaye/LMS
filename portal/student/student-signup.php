@@ -17,7 +17,10 @@ if(isset($_POST['submit'])){
     $rsl= mysqli_query($conn,$sql);
 
     if(!$rsl){
-        
+        echo"<p> Student Profile Created Successfully</p>";
+    }
+    else{
+        echo"<p>Student Profile Was Not Created</p>";
     }
 }
  ?>
