@@ -9,17 +9,17 @@ if(isset($_POST['submit'])){
     $email= $_POST['email'];
     $contact= $_POST['contact'];
     $username= $_POST['username']; 
-    $password= $_POST['password1'];
+    $password= $_POST['password'];
 
     $sql= "INSERT INTO student (id,firstName,lastName,dob,email,contact,userName,password1) VALUES('0','$firstName','$lastName','$dob','$email','$contact','$username','$password')";
 
     $rsl= mysqli_query($conn,$sql);
 
     if($rsl){
-        echo"<p> Student Profile Created Successfully</p>";
+        echo"<script>alert('Student Profile Created Successfully');</script>";
     }
     else{
-        echo"<p>Student Profile Was Not Created</p>";
+        echo"<script>alert('Student Profile Was Not Created');</script>";
     }
 }
 mysqli_close($conn);
