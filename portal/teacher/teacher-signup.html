@@ -8,6 +8,41 @@
     <script src="../../js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <legend>Apply as a Teacher/Tutor</legend>
+        <fieldset>
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" name="firstname" class="form-control" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" name="lastname" class="form-control" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" name="Dob" class="form-control" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contact</label>
+                <input type="number" name="contact" class="form-control" required/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Give a brief description of your professional background</label>
+                <textarea row="500" col="500" name="des" class="form-control"></textarea> 
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Upload your CV and other certificates</label>
+                <input type="file" name="Cert" class="form-control" required/>
+            </div>
+
+            <input type="submit" name="submit" value="Apply" class="btn btn-primary"/>
+
+        </fieldset>
+    </div>
 </body>
 </html>
