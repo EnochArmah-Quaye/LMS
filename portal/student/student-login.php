@@ -14,7 +14,7 @@ if($_SERVER["REQUEST METHOD"]=="POST"){
 
     $rsl = mysqli_query($conn,$sql); 
 
-    if(mysqli_num_rows($rsl) == 1)
+    if(mysqli_num_rows($rsl) == 1){}
 }
 
 ?>
