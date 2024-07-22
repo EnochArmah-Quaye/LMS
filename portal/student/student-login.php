@@ -14,7 +14,17 @@ if($_SERVER["REQUEST METHOD"]=="POST"){
 
     $rsl = mysqli_query($conn,$sql); 
 
-    if(mysqli_num_rows($rsl) == 1){}
-}
+    if(mysqli_num_rows($rsl) == 1){
+        $row = mysqli_fetch_assoc($rsl);
 
+        if($row['usertype'] == 'student' ){
+            $_SESSION['username'] = $username;
+            $_SESSION['usertype'] = 'student';
+            header("Location:student-homepage.php");
+        }
+        else{
+            echo"<p>Invalid password and username<p/>";
+        }
+}
+}
 ?>
