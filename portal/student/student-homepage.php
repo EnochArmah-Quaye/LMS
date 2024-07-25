@@ -14,6 +14,9 @@
 </head>
 <body>
     <h1>Hello World</h1><?php echo $_SESSION["username"]?>
+    <button><a href="#">Courses</a></button>
+    <button><a href="#">Courses</a></button>
+    <button><a href="#">Courses</a></button>
     <a href="../../scripts/logout.php">Logout</a>
 </body>
 </html>
