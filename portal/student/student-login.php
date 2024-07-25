@@ -5,7 +5,7 @@ require_once('../../scripts/conn.php');
 if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
-
+///New added code
 if($_SERVER["REQUEST METHOD"]=="POST"){
     $username = $_POST["userName"];
     $password = $_POST["password"];

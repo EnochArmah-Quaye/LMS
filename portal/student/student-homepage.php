@@ -1,3 +1,10 @@
+<?php
+  session_start();
+
+  if(!isset($_SESSION["username"])){
+    header("location:../../index.html");
+  }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Hello World</h1><?php echo $_SESSION["username"]?>
+    <a href="../../scripts/logout.php">Logout</a>
 </body>
 </html>
