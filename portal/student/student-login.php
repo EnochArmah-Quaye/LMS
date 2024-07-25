@@ -6,7 +6,7 @@ if(session_status() == PHP_SESSION_NONE){
     session_start();
 }
 ///New added code
-if($_SERVER["REQUEST METHOD"]=="POST"){
+if($_SERVER["REQUEST_METHOD"]=="POST"){
     $username = $_POST["userName"];
     $password = $_POST["password"];
     
@@ -23,8 +23,9 @@ if($_SERVER["REQUEST METHOD"]=="POST"){
             header("Location:student-homepage.php");
         }
         else{
-            echo"<p>Invalid password and username<p/>";
+            echo"Invalid password and username";
         }
 }
+exit();
 }
 ?>
