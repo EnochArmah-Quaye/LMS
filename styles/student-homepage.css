@@ -7,3 +7,14 @@
     overflow:auto;
     background-color: #f1f1f1;
 }
+
+#sidebar a:hover{
+    background-color: #555;
+    color:white;
+}
+
+#content{
+    margin-left: 200px;
+    padding:1px 16px;
+    height: 1000px;
+}

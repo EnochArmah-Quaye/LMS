@@ -17,7 +17,7 @@
 </head>
 <body>
   <div class="">
-    <h1>Hello World</h1>
+    
     <div id="sidebar">
     <div><?php echo $_SESSION["username"]?></div>
       <ul class="nav flex-column">
@@ -35,6 +35,13 @@
        </li>
        <a href="../../scripts/logout.php" class="btn btn-primary">Logout</a>
      </ul>
+    </div>
+    <div id="content">
+    <h1>Hello World</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rem sunt,<br/>
+       laborum est quod tenetur porro,
+        exercitationem reiciendis illo quas quisquam labore dolor earum,
+       ex ullam eaque magnam nesciunt fugiat.</p> 
     </div>
   </div>  
 </body>
