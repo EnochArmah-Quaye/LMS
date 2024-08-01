@@ -6,10 +6,28 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/css/main.css">
     <script src="../../js/bootstrap.bundle.min.js"></script>
+    <style>
+    #form-container{
+        margin: 8% 0 0 35%;
+        padding: 10px 10px 0 10px;
+        border-radius: 5px;
+        width: 30%;
+        height: 58%; 
+        text-align: center;
+        background-color: white;
+    } 
+    body {
+        background-color:#BC9E82;
+    }
+    #log{
+        margin-top: 30px;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
-        <form action="#" method="">
+        <div id="form-container">
+         <form action="#" method="POST">
             <legend>Log in</legend>
             <fieldset>
                 <div class="mb-3">
@@ -20,9 +38,10 @@
                     <label class="form-label">Password</label>
                     <input type="password" name="userName" class="form-control" required/>
                 </div>
-                <input type="submit" name="submit" value="Log in" class="btn btn-primary"/>
+                <input type="submit" name="submit" value="Log in" class="btn btn-primary" id="log"/>
             </fieldset>
-        </form>
+         </form>
+        </div>
     </div>
 </body>
 </html>
