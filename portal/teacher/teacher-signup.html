@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <legend>Apply as a Teacher/Tutor</legend>
-        <form method="POST" action="" enctype="multipart/form-data">
+        <form method="POST" action="teacher-signup.php" enctype="multipart/form-data">
         <fieldset>
             <div class="mb-3">
                 <label class="form-label">First Name</label>
@@ -50,7 +50,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Upload your CV and other certificates</label>
-                <input type="file" name="Cert" class="form-control" required/>
+                <input type="file" name="Cert" class="form-control" accept=".pdf" required/>
             </div>
 
             <input type="submit" name="submit" value="Apply" class="btn btn-primary"/>
