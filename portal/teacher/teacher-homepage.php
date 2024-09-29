@@ -1,8 +1,9 @@
 <?php
   session_start();
 
-  if(!isset($_SESSION["username"])){
+  if(!isset($_SESSION['username'])){
     header("location:../../index.html");
+    exit();
   }
 ?>
 <html lang="en">
@@ -19,7 +20,7 @@
   <div class="">
     
     <div id="sidebar">
-    <div><?php echo $_SESSION["username"]?></div>
+    <div><?php echo $_SESSION['username']?></div>
       <ul class="nav flex-column">
         <li class="nav-item">
          <a class="nav-link" href="#">Courses</a>

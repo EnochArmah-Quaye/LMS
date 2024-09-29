@@ -71,7 +71,7 @@
       $contact = $_POST['contact'];
       $description = $_POST['description'];
 
-      echo "<div>This part works fine</div>";
+      $hashedpaswsord = password_hash($password, PASSWORD_BCRYPT);
 
       if(isset($_FILES['Cert']) && $_FILES['Cert']['error'] === UPLOAD_ERR_OK) {
           $file_name = $_FILES['Cert']['name'];
@@ -91,7 +91,7 @@
               if (move_uploaded_file($file_tmp, $target_path)) {
                   // Prepare and execute the SQL query
                   $stmt = $conn->prepare("INSERT INTO teacher (firstName, lastName, dob, userName, password2, email, contact, description1, file1) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                  $stmt->bind_param("sssssssss", $firstname, $lastname, $date_of_birth, $username, $password, $email, $contact, $description, $file_name);
+                  $stmt->bind_param("sssssssss", $firstname, $lastname, $date_of_birth, $username, $hashedpaswsord, $email, $contact, $description, $file_name);
 
                   if ($stmt->execute()) {
                       echo "<html lang='en'>
