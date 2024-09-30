@@ -60,7 +60,7 @@ function makeRequest(messageText){
     //ajax
     
     
-    httpRequest.open('GET','http://localhost/chatbot/chatbot.php?message='+messageText,true);
+    httpRequest.open('GET','http://localhost/LMS/chatbot/chatbot.php?message='+messageText,true);
     httpRequest.send();
     httpRequest.onreadystatechange = chatbotSendMessage;
 };

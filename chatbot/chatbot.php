@@ -1,6 +1,6 @@
 <?php
 
-require_once('config.php');
+require_once('../scripts/conn.php');
 
 if(isset($_GET['message'])){
 
@@ -21,6 +21,7 @@ if(isset($_GET['message'])){
             echo json_encode($result);
         }
         else{
+            
             echo json_encode(['response_message'=>'Not a valid response']);
         }
     }
