@@ -33,6 +33,9 @@
        <li class="nav-item">
         <a class="nav-link" href="#">Courses</a>
        </li>
+       <li class="nav-item">
+        <a class="nav-link" href="../../chatbot/chatbot.html">ChatBot</a>
+       </li>
        <a href="../../scripts/logout.php" class="btn btn-primary">Logout</a>
      </ul>
     </div>
