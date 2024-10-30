@@ -1,0 +1,11 @@
+{
+    "name": "monolog/monolog",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Monolog\\Monolog\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
