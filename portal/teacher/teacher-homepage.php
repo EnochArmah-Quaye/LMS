@@ -34,6 +34,9 @@
        <li class="nav-item">
         <a class="nav-link" href="#">Courses</a>
        </li>
+       <li class="nav-item">
+        <a class="nav-link" href="course-creation.html">Create a new Course</a>
+       </li>
        <a href="../../scripts/logout.php" class="btn btn-primary">Logout</a>
      </ul>
     </div>

@@ -23,6 +23,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
  
         if($row['usertype'] == 'student' && $row['password1'] == $password && $row['userName'] == $username ){
             $_SESSION['username'] = $username;
+            $_SESSION['id'] = $row['id'];
             $_SESSION['usertype'] = 'student';
             header("Location:student-homepage.php");
         }

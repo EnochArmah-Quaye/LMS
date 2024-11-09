@@ -19,7 +19,7 @@
   <div class="">
     
     <div id="sidebar">
-    <div><?php echo $_SESSION["username"]?></div>
+    <div><?php echo $_SESSION["username"]; echo $_SESSION["id"]?></div>
       <ul class="nav flex-column">
         <li class="nav-item">
          <a class="nav-link" href="#">Courses</a>
@@ -31,10 +31,11 @@
         <a class="nav-link" href="#">Courses</a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" href="#">Courses</a>
+        <a class="nav-link" href="list-courses.php">Enroll in a Course</a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" href="../../chatbot/chatbot.html">ChatBot</a>
+        <a class="nav-link" href="../../chatbot/chatbot.html">General Assistant</a>
+        <a class="nav-link" href="../../chatbot2/chatbot2.html">Personal Assistant</a>
        </li>
        <a href="../../scripts/logout.php" class="btn btn-primary">Logout</a>
      </ul>
