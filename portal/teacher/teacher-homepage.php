@@ -29,7 +29,7 @@
          <a class="nav-link" href="#">Courses</a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" href="#">Courses</a>
+        <a class="nav-link" href="add_test.html">Add Test</a>
        </li>
        <li class="nav-item">
         <a class="nav-link" href="course_content.html">Add Course Content</a>

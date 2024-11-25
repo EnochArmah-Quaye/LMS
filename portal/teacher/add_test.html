@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../dist/css/main.css" >
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+    <form action="add_test.php" method="POST">
+        <fieldset>
+            <legend>Add a Test</legend>
+            <div class="mb-3">
+                <label class="form-label">Course ID</label>
+                <input type="number" name="course_id" class="form-control"/>
+            </div>
+            <div>
+                <label class="form-label">Title of Test</label>
+                <input type="text" name="title" class="form-control" />
+            </div>
+            <div>
+                <label class="form-label">Description of test</label>
+                <input type="test" name="description" class="form-control"/>
+            </div>
+            <input type="submit" name="submit" value="Add Test"/>
+        </fieldset>
+    </form>
+    <p>Please make sure you first fill the form above before proceeding to add questions</p>
+    <button><a href="add_question.html">Add questions to the test you just created.</a></button>
+    </div>
+</body>
+</html>
