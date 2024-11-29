@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="" method="">
+        <form action="add_question.php" method="POST">
             <fieldset>
                <legend>Add a question</legend>
                <div class="mb-3">
@@ -22,14 +22,14 @@
                </div>
                <div class="mb-3">
                  <label for="answers" class="form-label">Answer Choices</label>
-                 <input type="text" name="answer[]" placeholder="Answer 1" class="form-control" required/>
-                 <input type="text" name="answer[]" placeholder="Answer 2" class="form-control" required/>
-                 <input type="text" name="answer[]" placeholder="Answer 3" class="form-control" required/>
-                 <input type="text" name="answer[]" placeholder="Answer 4" class="form-control" required/>
+                 <input type="text" name="answers[]" placeholder="Answer 1" class="form-control" required/>
+                 <input type="text" name="answers[]" placeholder="Answer 2" class="form-control" required/>
+                 <input type="text" name="answers[]" placeholder="Answer 3" class="form-control" required/>
+                 <input type="text" name="answers[]" placeholder="Answer 4" class="form-control" required/>
                </div>
                <div>
-                 <label for="correct_answer">Correct Answer (Enter the index of the correct answer, e.g 0 for Answer 1)</label>
-                 <input type="number" name="correct_answer" required/>
+                 <label for="correct_answer">Correct Answer</label>
+                 <input type="text" name="correct_answer" placeholder="Type in the correct answer here" required/>
                </div>
                <input type="submit" name="submit" />
             </fieldset>
