@@ -83,6 +83,6 @@ $result1 = $stmt1->get_result();
         <?php } else{?>
             <p>No Courses Found</p>
     <?php } ?>
-    <button>Take a test</button>
+   <?php echo "<button><a href='take_test.php?course_id=".$course_id."'>Take a test</a></button>" ?>
 </body>
 </html> 
