@@ -9,7 +9,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 $text = $data->text;
 
-$client = new Client("AIzaSyD96KIhTHeQLN64wK_gArL7jB00dWlfIVI");
+$client = new Client("AIzaSyAqY6QljWdNbq0NErIvYo7t1J8t5zoriO4");
 
 $response = $client->geminipro()->generateContent(
     new TextPart($text),
