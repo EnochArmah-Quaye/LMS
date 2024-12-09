@@ -10,6 +10,8 @@ if(!isset($_SESSION['id'])){
 }
 
 $course_id = $_GET['course_id'];
+$student_id = $_SESSION['id'];
+echo $student_id;
 
 $stmt = $conn->prepare("SELECT * FROM courses WHERE id = ?");
 $stmt->bind_param("i",$course_id);

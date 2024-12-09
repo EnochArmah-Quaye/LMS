@@ -40,7 +40,7 @@ if(isset($_POST['submit'])){
     $stmt->bind_param("isssss", $course_id, $intro, $lesson_1, $files[0], $lesson_2, $files[1]);
     
     if($stmt->execute()){
-        echo "<div>Course Added Successfully</div>";
+        echo "<div>Course Content Added Successfully</div>";
     }
 
     

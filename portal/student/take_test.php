@@ -7,6 +7,11 @@ if(!isset($_GET['course_id'])){
     echo "Test can't be found.";
     exit;
 }
+if(!isset($_SESSION['id'])){
+    echo "Log in to access test";
+    exit;
+}
+
 
 $course_id = $_GET['course_id'];
 //echo $course_id;

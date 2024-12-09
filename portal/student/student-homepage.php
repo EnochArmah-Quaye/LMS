@@ -28,7 +28,7 @@
          <a class="nav-link" href="#">Courses</a>
        </li>
        <li class="nav-item">
-        <a class="nav-link" href="enrolled.php">Enrolled Courses</a>
+       <?php echo "<a class='nav-link' href='enrolled.php?student_id=".$_SESSION['id']."'>Enrolled Courses</a>" ?>
        </li>
        <li class="nav-item">
         <a class="nav-link" href="list-courses.php">Enroll in a Course</a>

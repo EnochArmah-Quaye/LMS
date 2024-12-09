@@ -3,8 +3,8 @@
 
 $servername="localhost";
 $user="root";
-$dbpassword="10835954enoch";
-$dbname="lms";
+$dbpassword = "";
+$dbname="lms1";
 
 $conn = mysqli_connect($servername,$user,$dbpassword,$dbname);
 
