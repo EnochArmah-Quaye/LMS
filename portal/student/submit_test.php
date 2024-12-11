@@ -16,6 +16,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     $score = 0;
     $answer_text = "";
+    $status = 0;
 
     foreach($answers as $question_id => $answer_id){
         $stmt = $conn->prepare("SELECT is_correct, answer_text FROM answers WHERE id = ?");
@@ -28,19 +29,23 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
         if($answer && $answer['is_correct'] == 1 ){
             $score++;
+            $status = 1;
         
-            $stmt = $conn->prepare("INSERT INTO test_score (student_id, test_id, score) VALUES(?,?,?)");
-            $stmt->bind_param("iii",$student_id,$test_id,$score);
+            $stmt = $conn->prepare("INSERT INTO test_score (student_id, test_id, score, status1) VALUES(?,?,?,?)");
+            $stmt->bind_param("iiii",$student_id,$test_id,$score,$status);
+            $stmt->execute();
 
             echo "The answer you privided was correct. Your score is". $score;
         }
         else{
-            $stmt= $conn->prepare("INSERT INTO test_score (student_id, test_id, score, incorrect_answer) VALUES(?,?,?,?)");
-            $stmt->bind_param("iiis", $student_id,$test_id,$score,$answer_text1);
+            $status = 0;
+            $stmt= $conn->prepare("INSERT INTO test_score (student_id, test_id, score, incorrect_answer, status1) VALUES(?,?,?,?,?)");
+            $stmt->bind_param("iiisi", $student_id,$test_id,$score,$answer_text1, $status);
             $stmt->execute();
             
             echo "The answer you provided was wrong. Your score is" . $score;
             echo "<br/>";
+            echo "<button><a href='learn_path.php?'>Suggest a new learning path</a></button>";
         }
     }
 
