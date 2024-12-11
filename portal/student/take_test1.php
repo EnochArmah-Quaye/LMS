@@ -39,11 +39,13 @@ $question_result = $stmt1->get_result();
 
 $questions = [];
 while($row = $question_result->fetch_assoc()){
+    
     $questions[$row['question_id']]['text'] = $row['question_text']; 
     $questions[$row['question_id']]['answers'][] = [
         'id' => $row['answer_id'],
         'text' => $row['answer_text']
     ]; 
+    
 
 }
 
