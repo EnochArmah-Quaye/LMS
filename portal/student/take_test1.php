@@ -45,8 +45,9 @@ while($row = $question_result->fetch_assoc()){
         'id' => $row['answer_id'],
         'text' => $row['answer_text']
     ]; 
-    
-
+    $questions[$row['question_id']]['questionID'] = $row['question_id']; 
+   // echo $questions['questionID'];
+    //echo $questions['text'];
 }
 
 //echo $result;
@@ -66,6 +67,7 @@ while($row = $question_result->fetch_assoc()){
         <?php foreach($questions as $question_id => $question){ ?>
             <div>
                 <h3><?php echo htmlspecialchars($question['text']); ?></h3>
+                <input type="hidden" name="question_id" value="<?php echo $question['questionID']?>"  />
                 <?php foreach($question['answers'] as $answer) {?>
                     <label>
                         <input type="radio" name="answers[<php echo $question_id; ?>]" value="<?php echo $answer['id'] ?>" required />
