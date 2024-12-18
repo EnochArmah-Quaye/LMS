@@ -13,7 +13,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $student_id = $_SESSION['id'];
     $answers = $_POST['answers'];
     $question_id = intval($_POST['question_id']);
-    echo $question_id;
+    $question_text = $_POST['question_text'];
+    echo $question_text;
 
 
     $score = 0;
@@ -27,22 +28,22 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $result = $stmt->get_result();
         $answer = $result->fetch_assoc();
         $answer_text1 = $answer["answer_text"];
-        echo $answer_text;
+       //echo $answer_text;
 
         if($answer && $answer['is_correct'] == 1 ){
             $score++;
             $status = 1;
         
-            $stmt = $conn->prepare("INSERT INTO test_score (student_id, test_id, score, status1) VALUES(?,?,?,?)");
-            $stmt->bind_param("iiii",$student_id,$test_id, $score,$status);
+            $stmt = $conn->prepare("INSERT INTO test_score (student_id, test_id, score, question_text, status1) VALUES(?,?,?,?,?)");
+            $stmt->bind_param("iiisi",$student_id,$test_id, $score,$question_text,$status);
             $stmt->execute();
 
             echo "The answer you privided was correct. Your score is". $score;
         }
         else{
             $status = 0;
-            $stmt= $conn->prepare("INSERT INTO test_score (student_id, test_id, score, incorrect_answer, status1 ) VALUES(?,?,?,?,?)");
-            $stmt->bind_param("iiisi", $student_id,$test_id, $score,$answer_text1, $status );
+            $stmt= $conn->prepare("INSERT INTO test_score (student_id, test_id, score, incorrect_answer, question_text, status1 ) VALUES(?,?,?,?,?,?)");
+            $stmt->bind_param("iiissi", $student_id,$test_id, $score,$answer_text1, $question_text, $status );
             $stmt->execute();
             
             echo "The answer you provided was wrong. Your score is" . $score;

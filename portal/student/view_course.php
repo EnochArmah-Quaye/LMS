@@ -43,8 +43,11 @@ $result1 = $stmt1->get_result();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../../dist/css/main.css" >
+    <script src="../../js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <div class="container">
     <h1>Course</h1>
     <?php if($result1->num_rows > 0 ) {?>
         <table >
@@ -86,5 +89,6 @@ $result1 = $stmt1->get_result();
             <p>No Courses Found</p>
     <?php } ?>
    <?php echo "<button><a href='take_test.php?course_id=".$course_id."'>Take a test</a></button>" ?>
+  </div>
 </body>
 </html> 

@@ -17,6 +17,17 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if($result){
+    echo "<html lang='en'>";
+    echo "<head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>Document</title>
+        <link rel='stylesheet' href='../../dist/css/main.css' >
+        <script src='../../js/bootstrap.bundle.min.js'></script>
+    </head>
+    <body>
+    <div class='container'>";
     while($row = $result->fetch_assoc()){
         echo "<div>";
         echo "<h2>".htmlspecialchars($row['title'])."</h2>";
@@ -24,6 +35,10 @@ if($result){
         echo "<a href='view_course.php?course_id=".$row['id']."'.>View Course</a>";
         echo "</div>";
     }
+    echo "</div>
+    </body>
+    </html>";
+   
 }
 else{
     echo "You are not enrolled in this course";

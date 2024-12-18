@@ -67,6 +67,7 @@ while($row = $question_result->fetch_assoc()){
         <?php foreach($questions as $question_id => $question){ ?>
             <div>
                 <h3><?php echo htmlspecialchars($question['text']); ?></h3>
+                <input type="hidden" name="question_text" value="<?php echo $question['text']?>"/>
                 <input type="hidden" name="question_id" value="<?php echo $question['questionID']?>"  />
                 <?php foreach($question['answers'] as $answer) {?>
                     <label>
