@@ -28,9 +28,9 @@ echo $json_data;
 $client = new Client("AIzaSyDP39zhCDBvqIbEjp_19qMcX8kj3Be7X30");
 
 $response = $client
-            ->withV1BetaVersion()
+           // ->withV1BetaVersion()
             ->geminiPro()
-            ->withSystemInstruction('You are an AI module created to suggest learning paths for students based on their performance on a test in a LMS.')
+            //->withSystemInstruction('You are an AI module created to suggest learning paths for students based on their performance on a test in a LMS.')
             ->generateContent(new TextPart($json_data));
 
   echo $response->text();
